@@ -66,9 +66,8 @@ func 報名檢測(name: String, age: Int, height: Double, weight: Double)
     let bmi = weight / ((height / 100) * (height / 100))
     // 👇 bmi 已經算好，請從此行下方開始寫你的判斷程式。
     let accord = age > 18 && (bmi >= 25 || height < 160)
-    let qualifications = accord ? "符合" : "不符合"
     
-    print("\(name) \(qualifications) 報名資格")
+    print(name, accord ? "符合" : "不符合" , "報名資格")
 }
 
 報名檢測(name: "安娜", age: 18, height: 180, weight: 60)
@@ -89,8 +88,8 @@ func 免役資格(name: String, vision: Double, height: Double, weight: Double)
     let bmi = weight / ((height / 100) * (height / 100))
     // 👇 bmi 已經算好，請從此行下方開始寫你的判斷程式。（vision 是最佳矯正視力）
     let militaryService = vision < 0.6 || (bmi > 35 || bmi < 16.5) || (height > 195 || height < 155)
-    let isNotMilitaryService = militaryService ? "不用" : "要"
-    print("\(name) \(isNotMilitaryService) 當兵")
+    
+    print(name, militaryService ? "不用" : "要" , "當兵")
 }
 
 免役資格(name: "亞當", vision: 0.5, height: 180, weight: 60)
